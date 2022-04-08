@@ -1,8 +1,9 @@
 module Mutations
   class BaseMutation < GraphQL::Schema::RelayClassicMutation
-    argument_class Types::BaseArgument
-    field_class Types::BaseField
-    input_object_class Types::BaseInputObject
     object_class Types::BaseObject
+    # This is used for return fields on the mutation's payload
+    field_class Types::BaseField
+    # This is used for generating the `input: { ... }` object type
+    input_object_class Types::BaseInputObject
   end
 end
