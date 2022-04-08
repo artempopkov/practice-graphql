@@ -17,7 +17,7 @@ gem "bootsnap", require: false
 gem 'faker', '~> 2.20.0'
 gem 'graphql', '~> 2.0.5'
 gem 'rack-cors', '~> 1.1.1'
-
+gem 'graphql-anycable', '~> 1.0'
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end

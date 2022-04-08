@@ -15,7 +15,7 @@ class GraphqlChannel < ApplicationCable::Channel
       channel: self,
     }
 
-    result = GamesSchema.execute(
+    result = PracticeGraphqlSchema.execute(
       query: query,
       context: context,
       variables: variables,
@@ -38,7 +38,7 @@ class GraphqlChannel < ApplicationCable::Channel
 
   def unsubscribed
     @subscription_ids.each { |sid|
-      GamesSchema.subscriptions.delete_subscription(sid)
+      PracticeGraphqlSchema.subscriptions.delete_subscription(sid)
     }
   end
 
